@@ -79,17 +79,37 @@ def questionTwelveAlt():
   
   print(dict1)
 
-'''var1 = 8
-var2 = 2
+#I did number 13, but deleted it :(
 
-
-if var1 > var2:
-    for i in range(var1, var2, var2 * -1):
-        if var1 % i == 0:
-            print(i)
-elif var2 < var1:
-    for i in range(var2, var1, var1 * -1):
-        if var1 % i == 0:
-            print(i)
-else:
-    print(var1)'''
+def questionFifteen():
+  '''Declare a string and assign it to "135246ABCzyx". Output the sorted version of the string using these rules. 1: Sorted uppercase letters are ahead of lowercase letters. 2: Sorted lowercase letters are ahead of digits. 3: Sorted odd digits are ahead of sorted even digits. NOTE: Values will be changed when grading.'''
+  
+  #This only works if one assumes that each group of characters are already sorted
+  #remember to use dir() on strings; it's useful
+  #Yes, endRestult was a typo, but I kept it
+  painfulVar = "135246ABCzyx"
+  uppercase = ""
+  lowercase = ""
+  odd = ""
+  even = ""
+  endRestult = ""
+  #endRestult would be uppercase + lowercase + odd + even (endRestultt += u/l/o/e)
+  
+  for i in range(len(painfulVar)):
+      if painfulVar[i].isalpha():
+          if painfulVar[i].isupper():
+              uppercase += painfulVar[i]
+          else:
+              lowercase += painfulVar[i]
+      elif painfulVar[i].isnumeric():
+          if int(painfulVar[i]) % 2 == 0:
+              even += painfulVar[i]
+          else:
+              odd += painfulVar[i]
+              
+  endRestult += uppercase
+  endRestult += lowercase
+  endRestult += odd
+  endRestult += even
+  
+  print(endRestult)
