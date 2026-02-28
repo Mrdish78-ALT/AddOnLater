@@ -1,3 +1,15 @@
+#Prompt: You can guess it
+def questionSix():
+  turingVar = "t123u123r123i123n123g"
+  output = ""
+  
+  for stupidName in range(len(turingVar)):
+      if turingVar[stupidName] == "t" or turingVar[stupidName] == "u" or turingVar[stupidName] == "r" or turingVar[stupidName] == "i" or turingVar[stupidName] == "n" or turingVar[stupidName] == "g":
+          #or say if turingVar[stupidName] in "turing":
+              output += turingVar[stupidName]
+  
+  print(output)
+
 #Prompt: assign a list to the values [1, 2, 3, 4, 5]. Calculate (we've decided on calculating the average), then output the list backwards.
 def questionSeven():
   myList = [1, 2, 3, 4, 5]
